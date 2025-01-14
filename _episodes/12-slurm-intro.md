@@ -41,13 +41,13 @@ So this script follows the syntax we learned about. It then prints out some info
 
 A recap on the sbatch syntax:
 
-The `#SBATCH` lines specify to SLURM the computational resources/specifications we want for our job. It is also important to note that SLURM job scripts start with `#!/bin/bash` because they are essentially bash scripts.  
-The `--account` flag tells the system which allocation to 'charge' for the compute time.  
-The `--nodes` flag specifies how many nodes you want to use.  
-The `--ntasks-per-node` flag specifies how many tasks per node you want to run.  
-The `--cpus-per-task` flag specifies how many CPUs (cores) per task you need. 
-The `--mem` flag specifies how much memory to use per job.
-The `--time` flag sets the maximum allowable time for your job to run (i.e. the wall-clock limit). This job is set to get cut-off by SLURM at the 5 minute mark.  
+- The `#SBATCH` lines specify to SLURM the computational resources/specifications we want for our job. It is also important to note that SLURM job scripts start with `#!/bin/bash` because they are essentially bash scripts.  
+- The `--account` flag tells the system which allocation to 'charge' for the compute time.  
+- The `--nodes` flag specifies how many nodes you want to use.  
+- The `--ntasks-per-node` flag specifies how many tasks per node you want to run.  
+- The `--cpus-per-task` flag specifies how many CPUs (cores) per task you need. 
+- The `--mem` flag specifies how much memory to use per job.
+- The `--time` flag sets the maximum allowable time for your job to run (i.e. the wall-clock limit). This job is set to get cut-off by SLURM at the 5 minute mark.  
 
 
 Let's submit it to the queue! 
