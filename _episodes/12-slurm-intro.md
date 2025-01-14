@@ -1,7 +1,7 @@
 ---
 title: "Basics of Interacting with SLURM Scheduler"
 teaching: 5
-exercises: 20
+exercises: 10
 questions:
 objectives:
 - Submit a job to the queue
