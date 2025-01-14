@@ -1,6 +1,6 @@
 ---
 title: "Basics of Singularity"
-teaching: 10
+teaching: 5
 exercises: 10
 questions:
 objectives:
