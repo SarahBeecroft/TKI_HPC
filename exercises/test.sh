@@ -1,5 +1,4 @@
 #!/bin/bash -l
-#SBATCH --reservation=UWAbioinformatics
 #SBATCH --account=courses01
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
