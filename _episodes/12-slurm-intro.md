@@ -11,19 +11,33 @@ keypoints:
 - SLURM manages the allocation and resourcing of all submitted jobs
 - Being able to check the status of your job is useful
 ---
+## Launching sbatch scripts to the queue
 Right now, we should all be working in the `/scratch` filesystem. We are all currently running on a Setonix login node by default. 
 
 That's nice, but how about we submit a job script to the queue with `sbatch` and see what happens? Do you remember how to submit an SBATCH script to SLURM? Let's go through it now:
 
-## Looking at the test sbatch script provided in the training materials
+### Looking at the test sbatch script provided in the training materials
 What is inside the script we have provided?
 
 ```bash
 cat test.sh
 ```
+```output
+#!/bin/bash -l
+#SBATCH --account=courses01
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=100M
+#SBATCH --time=00:05:00
+#SBATCH --partition=work
 
+echo 'I am a test job'
+echo 'sleeping for 5 minutes'
+sleep 5m
+```
 
-
+So this job follows 
 > ## Submitting a job to the queue using sbatch
 > ```bash
 > sbatch test.sh
