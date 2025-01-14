@@ -50,7 +50,6 @@ pwd
 
 Now let's inspect the container.  (**Hint**: you need to run `pwd` in the container)
 
-## Solution
 ```bash
 singularity exec docker://ubuntu:16.04 pwd
 ```
@@ -65,8 +64,6 @@ By default on Setonix, Singularity mounts the host current directory, and uses i
 
 ## Worked example
 Try and create a file called `example` in the container root directory.  (**Hint**: run `touch /example` inside the container).
-
-## Solution
 
 ```bash
 singularity exec docker://ubuntu:16.04 touch /example
@@ -89,40 +86,36 @@ There is also a short syntax, that just mounts the dir using the same name and p
 Let's use the latter syntax to mount `$TUTO` into the container and re-run `ls`.
 
 ```
-singularity exec -B $TUTO docker://ubuntu:16.04 ls $TUTO/../_episodes
+singularity exec -B $MYSCRATCH/TKI_HPC/_episodes docker://ubuntu:16.04 ls $MYSCRATCH/TKI_HPC/_episodes
 ```
-{: .bash}
+
 
 ```
-11-zeus_login.md  12-singularity-intro.md  13-bio-example-host.md  14-break.md	21-blast.md  22-workflow-engines.md  31-break.md
+11-setonix_login.md  12-singularity-intro.md  13-modules.md  14-singularity-intro.md	15-sharing-files.md
 ```
-{: .output}
+
 
 Also, we can write files in a host dir which has been bind mounted in the container:
 
+```bash
+singularity exec -B $MYSCRATCH/TKI_HPC/_episodes docker://ubuntu:16.04 touch $MYSCRATCH/TKI_HPC/_episodes/example.txt
+singularity exec -B $MYSCRATCH/TKI_HPC/_episodes docker://ubuntu:16.04 ls $MYSCRATCH/TKI_HPC/_episodes/
 ```
-singularity exec -B $TUTO docker://ubuntu:16.04 touch $TUTO/../_episodes/example
-singularity exec -B $TUTO docker://ubuntu:16.04 ls $TUTO/../_episodes/example
-```
-{: .bash}
 
+```output
+/home/ubuntu/singularity-containers/_episodes/example.txt
 ```
-/home/ubuntu/singularity-containers/_episodes/example
-```
-{: .output}
 
 Now we are talking!
 
 If you need to mount multiple directories, you can either repeat the `-B` flag multiple times, or use a comma-separated list of paths, *i.e.*
 
-```
+```bash
 -B dir1,dir2,dir3
 ```
-{: .bash}
 
 Also, if you want to keep the runtime command compact, you can equivalently specify directories to be bind mounted using the environment variable `SINGULARITY_BINDPATH`:
 
-```
+```bash
 export SINGULARITY_BINDPATH="dir1,dir2,dir3"
 ```
-{: .bash}
