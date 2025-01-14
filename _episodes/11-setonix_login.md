@@ -42,7 +42,7 @@ To save you some time typing, Pawsey has set up some shortcuts for all users. We
 
 
 | Shortcut | Meaning |
-|--------------------|
+|----------|----------|
 | $USER | Your unique user ID. e.g. `cou001` or `sbeecroft` |
 | $PAWSEY_PROJECT | Your default project code (some people are members of multiple projects). e.g. `courses` or `pawsey1086` |
 | $MYSCRATCH | Path to your default scratch diretory. e.g. `/scratch/courses/cou001/` |
