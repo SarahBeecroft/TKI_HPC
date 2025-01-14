@@ -4,20 +4,25 @@ teaching: 5
 exercises: 20
 questions:
 objectives:
-- Query the SLURM job queue
 - Submit a job to the queue
+- Query the SLURM job queue
 - Cancel a submitted job
 keypoints:
 - SLURM manages the allocation and resourcing of all submitted jobs
 - Being able to check the status of your job is useful
 ---
+Right now, we should all be working in the `/scratch` filesystem. We are all currently running on a Setonix login node by default. 
 
+That's nice, but how about we submit a job script to the queue with `sbatch` and see what happens? Do you remember how to submit an SBATCH script to SLURM? Let's go through it now:
 
+## Looking at the test sbatch script provided in the training materials
+What is inside the script we have provided?
 
-To refine the listing to a certain user (usually yourself), use the `-u` flag
 ```bash
-squeue -u $USER
+cat test.sh
 ```
+
+
 
 > ## Submitting a job to the queue using sbatch
 > ```bash
