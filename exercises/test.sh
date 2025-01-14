@@ -9,4 +9,4 @@
 
 echo 'I am a test job'
 echo 'sleeping for 5 minutes'
-sleep 5m
+srun sleep 5m
