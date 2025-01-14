@@ -13,24 +13,26 @@ keypoints:
 ## What are modules
 The supercomputing admin staff make available many popular packages, so that users don't need to locally install common software. This is an efficient use of resources and time. Learning how to use modules is essential for getting the most out of HPC resources. 
 
-> ## A worked example
-> For example, let's say that you want to use BLAST+. Rather than having to find out how to locally install the software, you could check to see if BLAST+ is supported as a module. Let's check! 
-> ```bash
-> module avail blast
-> ```
-> 
-> ```output
-> ----- /software/setonix/current/containers/views/modules -----
->   blast/2.12.0--pl5262h3289130_0
->
-> Use "module spider" to find all possible modules and extensions.
-> Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
->
-> ```
-> We have two versions to choose from: versions 2.7.1 and 2.10.1, as indicated by the numbers after the slash. Let's choose 2.7.1 for this example. 
-> To load a module with a specific version number, use
-> ```bash
-> module load blast/2.12.0--pl5262h3289130_0 
+## A worked example
+For example, let's say that you want to use BLAST+. Rather than having to find out how to locally install the software, you could check to see if BLAST+ is supported as a module. Let's check! 
+```bash
+module avail blast
+```
+ 
+```output
+-------------- /software/setonix/2024.05/containers/views/modules --------------
+   blast/2.12.0--pl5262h3289130_0
+
+If the avail list is too long consider trying:
+
+"module --default avail" or "ml -d av" to just list the default modules.
+"module overview" or "ml ov" to display the number of modules for each name.
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
+```
+
 > ```
 > Then to see what modules you have loaded in your environment, use
 > ```bash
