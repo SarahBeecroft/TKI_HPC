@@ -11,23 +11,16 @@ keypoints:
 - Download a container image in a selected location with `singularity pull`
 ---
 
-## Want to save time later in the tutorial?
-Run the following commands to start downloading a few images that you'll require later:
-```
-sbatch sbatch_pull_big_images.sh
-```
-This pull process will take at least 10-20 minutes. Meanwhile, you'll be able to keep on going with this episode while slurm handles the job.
+## Let's ask for an interactive session on slurm
 
-## Are you running on a shared HPC system?
-
-If you're running this tutorial on a shared system (*e.g.* on Setonix at Pawsey), you should use one of the compute nodes rather than the login node.  You can get this setup by using an interactive scheduler allocation, for instance on Setonix with Slurm:
+Since we are running this tutorial on a shared system, we should use one of the compute nodes rather than the login node. You can get this setup by using an interactive Slurm allocation:
 
 ```bash
 salloc -n 1 -t 4:00:00 --account=courses01
 module load singularity/4.1.0-nompi
 ```
 
-```bash
+```output
 salloc: Granted job allocation 3453895
 salloc: Waiting for resource configuration
 salloc: Nodes z052 are ready for job
@@ -99,4 +92,3 @@ singularity exec $MYSOFTWARE/ubuntu_16.04.sif echo "Hello World"
 
 ## Contextual help on Singularity commands
 Use `singularity help`, optionally followed by a command name, to print help information on features and options.
-
