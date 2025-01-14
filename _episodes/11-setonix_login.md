@@ -37,12 +37,26 @@ User name is the name you selected on the training accounts sheet- e.g. somethin
 
 Helpful link: https://www.hostinger.com/tutorials/how-to-use-putty-ssh
 
+### Useful shortcuts that Pawsey sets up for you
+To save you some time typing, Pawsey has set up some shortcuts for all users. We will make use of these throughout the hands-on session. Let's look at them:
+
+
+| Shortcut | Meaning |
+|--------------------|
+| $USER | Your unique user ID. e.g. `cou001` or `sbeecroft` |
+| $PAWSEY_PROJECT | Your default project code (some people are members of multiple projects). e.g. `courses` or `pawsey1086` |
+| $MYSCRATCH | Path to your default scratch diretory. e.g. `/scratch/courses/cou001/` |
+| $MYSOFTWARE | Path to your default software directory. e.g. `/software/projects/courses/cou001` |
+
+
 ### Downloading the lesson material
 There are some materials for the lessons which are hosted on github. In order to access those on Setonix, you will need to clone the git repo, then change directory. You can list the contents of the directory with `ls`
 
 ```bash
 cd $MYSCRATCH
-git clone https://github.com/SarahBeecroft/Intro2HPC.git
-cd Intro2HPC/exercises
+pwd
+git clone https://github.com/SarahBeecroft/TKI_HPC.git
+cd TKI_HPC/exercises
+pwd
 ls
 ```
