@@ -1,7 +1,7 @@
 ---
 title: "Logging on to Setonix"
 teaching: 5
-exercises: 10
+exercises: 5
 questions:
 objectives:
 - Learn how to remote access Setonix
