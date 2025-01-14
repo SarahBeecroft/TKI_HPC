@@ -20,7 +20,7 @@ module avail singularity
 ```
  
 ```output
--------------------------------------------------------------------- /software/setonix/2024.05/pawsey/modules --------------------------------------------------------------------
+----------------- /software/setonix/2024.05/pawsey/modules --------------------------
    singularity/4.1.0-askap-gpu    singularity/4.1.0-mpi-gpu    singularity/4.1.0-nohost    singularity/4.1.0-slurm (D)
    singularity/4.1.0-askap        singularity/4.1.0-mpi        singularity/4.1.0-nompi
 
