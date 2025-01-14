@@ -1,7 +1,7 @@
 ---
 title: "Using Modules"
 teaching: 5
-exercises: 20
+exercises: 10
 questions:
 objectives:
 - Explain what modules are
