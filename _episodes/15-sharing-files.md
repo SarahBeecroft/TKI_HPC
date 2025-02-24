@@ -55,7 +55,7 @@ singularity exec docker://ubuntu:16.04 pwd
 ```
 
 ```output
-/scratch/pawsey0001/sbeecroft/intermediateHPC/exercises/intro_singularity
+/scratch/pawsey0001/sbeecroft/TKI_HPC/exercises/intro_singularity
 ```
 Host and container working directories match!
 
